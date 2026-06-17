@@ -1,0 +1,60 @@
+.conversation-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-header {
+  background: #56190d;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.conversation-header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messages {
+  background: transparent;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 300px;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.left {
+  background: rgb(21, 140, 214);
+  align-self: flex-start;
+}
+
+.right {
+  background: #f8c6e2;
+  align-self: flex-end;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: rgb(217, 218, 167);
+}
+
+.input-box input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #a8de14;
+  border-radius: 20px;
+}
