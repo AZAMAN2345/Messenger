@@ -30,10 +30,7 @@ function Chat() {
         />
 
         <div className="top-right">
-          <Button
-            icon={<FiCamera />}
-            className="icon-btn"
-          />
+
 
           <Button
             icon={<IoAdd />}
@@ -86,11 +83,6 @@ function Chat() {
       </div>
 
       <div className="bottom-nav">
-        <Button
-          icon={<IoAdd />}
-          text="Updates"
-          className="nav-btn"
-        />
 
         <Button
           icon={<IoCallOutline />}
