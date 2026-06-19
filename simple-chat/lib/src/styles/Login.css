@@ -17,7 +17,7 @@
   width: 350px;
   background: white;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -40,4 +40,20 @@
   background: #2563eb;
   color: white;
   cursor: pointer;
+}
+
+.login-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-error {
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.login-card .switch-auth {
+  background: transparent;
+  color: #2563eb;
+  padding: 4px;
 }

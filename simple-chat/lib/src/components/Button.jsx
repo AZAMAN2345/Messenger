@@ -6,12 +6,14 @@ function Button({
   onClick,
   className = "",
   type = "button",
+  disabled = false,
 }) {
   return (
     <button
       type={type}
       className={`custom-btn ${className}`}
       onClick={onClick}
+      disabled={disabled}
     >
       {icon}
       {text}

@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  overflow-y: auto;
 }
 
 .message {
@@ -57,4 +58,12 @@
   padding: 15px;
   border: 1px solid #a8de14;
   border-radius: 20px;
+}
+
+.conversation-status {
+  align-self: center;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 8px;
+  color: white;
+  padding: 8px 12px;
 }
