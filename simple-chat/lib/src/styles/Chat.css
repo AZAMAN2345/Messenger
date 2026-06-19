@@ -3,6 +3,7 @@
   background: black;
   color: white;
   padding: 20px;
+  padding-bottom: 80px;
 }
 
 .top-bar {
@@ -12,8 +13,90 @@
 }
 
 .top-right {
+  position: relative;
   display: flex;
   gap: 10px;
+}
+
+.add-user-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 5;
+  width: min(280px, calc(100vw - 40px));
+  padding: 12px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #151515;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+
+.add-user-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  background: #202020;
+  color: white;
+  outline: none;
+}
+
+.add-user-input:focus {
+  border-color: #25d366;
+}
+
+.add-user-list {
+  margin-top: 10px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.add-user-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 6px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+}
+
+.add-user-option:hover {
+  background: #242424;
+}
+
+.add-user-option img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.add-user-option span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-user-option strong,
+.add-user-option small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.add-user-option small,
+.add-user-status {
+  color: #aaa;
+}
+
+.add-user-status {
+  margin: 4px 0 0;
+  font-size: 13px;
 }
 
 .chat-page h1 {
@@ -54,6 +137,11 @@
 .contact p {
   margin-top: 5px;
   color: #aaa;
+}
+
+.empty-state {
+  color: #aaa;
+  margin-top: 18px;
 }
 
 .bottom-nav {
