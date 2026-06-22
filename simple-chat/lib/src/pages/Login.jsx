@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Login.css";
 import Button from "../components/Button";
 import { apiRequest, setSession } from "../api";
@@ -56,68 +57,40 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <form className="login-card" onSubmit={onSubmit}>
-        <h1>Simple Chat</h1>
+    <div className="container">
+      <div className="card">
+        <h1>LOGIN</h1>
 
-        {mode === "register" && (
-          <>
-            <input
-              name="username"
-              value={form.username}
-              onChange={updateForm}
-              placeholder="Username"
-              required
-            />
-            <input
-              name="email"
-              type="email"
-              value={form.email}
-              onChange={updateForm}
-              placeholder="Email"
-              required
-            />
-          </>
-        )}
-
-        {mode === "login" && (
+        <form>
           <input
-            name="emailOrUsername"
-            value={form.emailOrUsername}
-            onChange={updateForm}
-            placeholder="Email or username"
-            required
+            type="text"
+            placeholder="Username"
           />
-        )}
 
-        <input
-          name="password"
-          type="password"
-          value={form.password}
-          onChange={updateForm}
-          placeholder="Password"
-          required
-        />
+          <input
+            type="password"
+            placeholder="Password"
+          />
 
-        {error && <p className="form-error">{error}</p>}
+          <div className="remember">
+            <input type="checkbox" />
+            <label>Remember me</label>
+          </div>
 
-        <Button
-          text={loading ? "Please wait..." : mode === "login" ? "Login" : "Create account"}
-          type="submit"
-          disabled={loading}
-        />
+          <button className="button" onClick={onSubmit}>
+            Sign In
+          </button>
 
-        <button
-          className="switch-auth"
-          type="button"
-          onClick={() => {
-            setError("");
-            setMode(mode === "login" ? "register" : "login");
-          }}
-        >
-          {mode === "login" ? "Create a new account" : "Use an existing account"}
-        </button>
-      </form>
+          <p className="forgot">
+            Forgot your password?
+          </p>
+
+          <p className="link">
+            Don't have an account?
+            <Link to="/register"> Register</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }
