@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0b;
+  font-family: sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #0b0b0b, #161616);
+}
+
+.nav {
+  height: 70px;
+  background: white;
+  border-radius: 15px;
+  padding: 0 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo label {
+  width: 12px;
+  height: 12px;
+  background: #00b140;
+  border-radius: 50%;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.download {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background: #00b140;
+  color: white;
+  cursor: pointer;
+}
+
+.home {
+  margin-top: 20px;
+  min-height: 85vh;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #111, #1c1c1c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(0, 177, 64, 0.07) 1px,
+      transparent 1px),
+    linear-gradient(90deg, rgba(0, 177, 64, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text {
+  text-align: center;
+  z-index: 2;
+}
+
+.text h1 {
+  color: white;
+  font-size: 60px;
+  width: 650px;
+}
+
+.text h1 span {
+  color: #00ff66;
+}
+
+.text p {
+  color: #cfcfcf;
+  margin-top: 15px;
+  width: 500px;
+  margin-inline: auto;
+  font-size: 17px;
+}
+
+.text button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #00b140;
+  color: white;
+  cursor: pointer;
+}
+
+.preview {
+  display: flex;
+  gap: 100px;
+  margin-top: 70px;
+  z-index: 2;
+}
+
+.person {
+  position: relative;
+  width: 250px;
+}
+
+.person img {
+  width: 100%;
+  height: auto;
+}
+
+.msg {
+  position: absolute;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.one {
+  top: 40px;
+  right: -20px;
+}
+
+.two {
+  top: 90px;
+  left: -30px;
+  background: #00b140;
+  color: white;
+}
+
+.three {
+  top: 50px;
+  left: -20px;
+}
+
+.four {
+  top: 100px;
+  right: -30px;
+  background: #00b140;
+  color: white;
+}
+
